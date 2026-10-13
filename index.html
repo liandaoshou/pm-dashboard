@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>项目管理面板</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:-apple-system,"PingFang SC","Microsoft YaHei","Noto Sans CJK SC",sans-serif;background:#f4f6fb;color:#1f2937;font-size:14px}
+header{display:flex;align-items:center;justify-content:space-between;padding:14px 28px;background:#fff;border-bottom:1px solid #e5e7eb}
+h1{font-size:20px;margin:0}h2{font-size:15px;margin:0 0 12px}
+.banner{background:#fff7e6;color:#ad6800;border:1px solid #ffd591;padding:8px 28px;font-size:13px}
+main{padding:20px 28px;display:grid;gap:18px}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.card{background:#fff;border-radius:12px;padding:16px 18px;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.card .n{font-size:28px;font-weight:700;margin-top:6px}.card .l{color:#6b7280;font-size:13px}
+.panel{background:#fff;border-radius:12px;padding:16px 18px;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+table{width:100%;border-collapse:collapse}th,td{text-align:left;padding:8px 6px;border-bottom:1px solid #f0f0f0}th{color:#6b7280;font-weight:500;font-size:12px}
+.bar{width:120px;height:8px;background:#eef0f4;border-radius:4px;display:inline-block;vertical-align:middle;margin-right:6px}.bar i{display:block;height:100%;background:#4f6ef7;border-radius:4px}
+.tag{padding:2px 9px;border-radius:10px;font-size:12px}.r低{background:#e6f7ee;color:#18864b}.r中{background:#fff4e0;color:#c26a00}.r高{background:#fde8e8;color:#c81e1e}
+.kanban{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
+.col{background:#f4f6fb;border-radius:10px;padding:8px;min-height:110px}.col.over{background:#e3e9ff}
+.col h3{font-size:13px;margin:2px 4px 8px;color:#374151}
+.kc{background:#fff;border-radius:8px;padding:8px;margin-bottom:6px;cursor:grab;box-shadow:0 1px 2px rgba(0,0,0,.08);font-size:13px}
+.kc small{color:#6b7280}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+ul{margin:0;padding-left:18px}li{margin:5px 0}
+button{background:#4f6ef7;color:#fff;border:0;border-radius:8px;padding:7px 14px;cursor:pointer}button.ghost{background:#eef0f4;color:#374151}
+.link{background:none;color:#4f6ef7;padding:0}
+dialog{border:0;border-radius:12px;width:420px;padding:20px}dialog label{display:block;margin:8px 0 3px;font-size:12px;color:#6b7280}
+dialog input,dialog select{width:100%;padding:7px;border:1px solid #d1d5db;border-radius:6px}
+.muted{color:#9ca3af}.desc{color:#6b7280;font-size:12px;max-width:420px}a{color:#4f6ef7;text-decoration:none}.r{background:#eef0f4;color:#6b7280}
+</style></head><body>
+<header><h1>📊 项目管理面板</h1><div class="muted" id="upd">加载中…</div></header>
+<div class="banner" style="background:#eef3ff;color:#3b4fb8;border-color:#c7d2fe">ℹ️ 只读面板，数据来自仓库中的 <a href="https://github.com/liandaoshou/pm-dashboard/blob/main/data.json">data.json</a>。修改请编辑 data.json，或运行 update_data.py 从 GitHub 刷新。</div>
+<main>
+<section class="cards" id="cards"></section>
+<section class="panel"><h2>项目列表</h2><table><thead><tr><th>项目</th><th>当前阶段</th><th>进度</th><th>负责人</th><th>最近提交</th><th>下个里程碑</th><th>风险</th></tr></thead><tbody id="tbody"></tbody></table></section>
+<section class="panel"><h2>看板</h2><div class="kanban" id="kanban"></div></section>
+<section class="two"><div class="panel"><h2>待办（open issues / PR）</h2><ul id="todos"></ul></div><div class="panel"><h2>风险与依赖</h2><ul id="risks"></ul></div></section>
+</main>
+<script>
+const STAGES=["需求分析","系统设计","开发编码","测试质量","部署上线","运维迭代"];
+const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const TBD='<span class="muted">待定</span>';
+const fmt=t=>t?new Date(t).toLocaleString("zh-CN",{timeZone:"Asia/Shanghai",hour12:false}):"";
+const rk=p=>p.risk?`<span class="tag r${esc(p.risk)}">${esc(p.risk)}</span>`:TBD;
+function weekDue(d){if(!d)return false;const t=new Date();t.setHours(0,0,0,0);const x=new Date(d+"T00:00");return x>=t&&x-t<=7*864e5}
+function render(data){const P=data.projects||[];
+ upd.textContent="最后更新："+(fmt(data.updatedAt)||"未知")+"（北京时间）";
+ const c=[["项目总数",P.length],["进行中",P.filter(p=>p.progress!==100).length],["有风险",P.filter(p=>p.risk&&p.risk!=="低").length],["本周到期里程碑",P.filter(p=>weekDue(p.milestoneDate)).length]];
+ cards.innerHTML=c.map(([l,n])=>`<div class="card"><div class="l">${l}</div><div class="n">${n}</div></div>`).join("");
+ tbody.innerHTML=P.map(p=>`<tr><td><b>${p.repo?`<a href="${esc(p.repo)}" target="_blank">${esc(p.name)}</a>`:esc(p.name)}</b><div class="desc">${esc(p.description)}</div></td><td title="${esc(p.stageNote)}">${esc(p.stage)||TBD}</td><td>${p.progress==null?TBD:`<span class="bar"><i style="width:${+p.progress}%"></i></span>${+p.progress}%`}</td><td>${esc(p.owner)||TBD}</td><td>${p.lastCommit?`<a href="${esc(p.lastCommit.url)}" target="_blank">${esc(fmt(p.lastCommit.date))}</a><div class="desc">${esc(p.lastCommit.message)}</div>`:TBD}</td><td>${p.milestone?esc(p.milestone)+` <small class="muted">${esc(p.milestoneDate)}</small>`:TBD}</td><td>${rk(p)}</td></tr>`).join("")||'<tr><td colspan="7">暂无项目</td></tr>';
+ kanban.innerHTML=STAGES.map(s=>{const L=P.filter(p=>p.stage===s);return `<div class="col"><h3>${s} · ${L.length}</h3>${L.map(p=>`<div class="kc"><b>${esc(p.name)}</b><br><small>${esc(p.owner)} · ${p.progress==null?"进度待定":p.progress+"%"}</small></div>`).join("")}</div>`}).join("");
+ todos.innerHTML=P.flatMap(p=>[...(p.todos||[]).map(t=>`<li>${esc(t)} <small class="muted">— ${esc(p.name)}</small></li>`),...(p.openPRs||[]).map(r=>`<li>PR <a href="${esc(r.url)}" target="_blank">#${r.number} ${esc(r.title)}</a> <small class="muted">— ${esc(p.name)}</small></li>`)]).join("")||"<li>暂无</li>";
+ risks.innerHTML=P.flatMap(p=>(p.risks||[]).map(t=>`<li>${esc(t)} <small class="muted">— ${esc(p.name)}</small></li>`)).join("")||'<li class="muted">待定</li>';
+}
+fetch("data.json?t="+Date.now(),{cache:"no-store"}).then(r=>r.json()).then(render).catch(e=>{upd.textContent="数据加载失败："+e});
+</script></body></html>

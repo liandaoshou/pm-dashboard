@@ -1,0 +1,32 @@
+{
+  "updatedAt": "2026-10-13T09:30:23Z",
+  "projects": [
+    {
+      "id": "myscaffolding",
+      "name": "MyScaffolding（TimeCocoon · 时间茧）",
+      "repo": "https://github.com/liandaoshou/MyScaffolding",
+      "stage": "开发编码",
+      "stageNote": "依据：近期持续合入功能 PR（知识库 K1–K2a 等），且有进行中的功能 PR",
+      "owner": "liandaoshou",
+      "progress": null,
+      "milestone": "",
+      "milestoneDate": "",
+      "risk": "",
+      "risks": [],
+      "todos": [],
+      "openPRs": [
+        {
+          "number": 19,
+          "title": "Cursor/knowledge card links k2b",
+          "url": "https://github.com/liandaoshou/MyScaffolding/pull/19"
+        }
+      ],
+      "lastCommit": {
+        "date": "2026-10-12T08:07:41Z",
+        "message": "docs: add the development handoff plan (#18)",
+        "url": "https://github.com/liandaoshou/MyScaffolding/commit/9ef3b4827a2f860363ba75c51f4f4df903bba1e9"
+      },
+      "description": "TimeCocoon · 时间茧 is a local-first personal work system. You state a goal, approve a plan, and watch an agent runtime stream the work into real artifacts. This repository is the scaffold for that system: strict tooling from the first commit, and one sample module — projects, plus a live run — that later features should copy."
+    }
+  ]
+}
