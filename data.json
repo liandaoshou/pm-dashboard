@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-10-16T03:26:09Z",
+  "updatedAt": "2026-10-18T02:50:36Z",
   "projects": [
     {
       "id": "myscaffolding",
       "name": "MyScaffolding（TimeCocoon · 时间茧）",
       "repo": "https://github.com/liandaoshou/MyScaffolding",
       "stage": "开发编码",
-      "stageNote": "依据：10/16 合入里程碑 B 全部（阶段流水线 #48、审核关卡 #49、看板与首页待办 #54），及 UI 规范与知识库修复 #50–#53；main 最新为 Merge #54；当前无 open PR / issue",
+      "stageNote": "依据：10/16 合入里程碑 B 全部（阶段流水线 #48、审核关卡 #49、看板与首页待办 #54），及 UI 规范与知识库修复 #50–#53；main 最新为 Merge #54；10/17 新开 #55（ADR 0019 修订）与 #56（首页套用设计规范），CI 均通过，待合入",
       "owner": "liandaoshou",
       "progress": null,
       "milestone": "里程碑 B 已完成（#48 / #49 / #54）",
@@ -14,7 +14,18 @@
       "risk": "",
       "risks": [],
       "todos": [],
-      "openPRs": [],
+      "openPRs": [
+        {
+          "number": 56,
+          "title": "UI：首页套用设计规范",
+          "url": "https://github.com/liandaoshou/MyScaffolding/pull/56"
+        },
+        {
+          "number": 55,
+          "title": "docs(adr): ADR 0019 修订（里程碑 B 落地时的五处补充）",
+          "url": "https://github.com/liandaoshou/MyScaffolding/pull/55"
+        }
+      ],
       "lastCommit": {
         "date": "2026-10-16T02:35:28Z",
         "message": "Merge pull request #54 from liandaoshou/feat/stage-board",
