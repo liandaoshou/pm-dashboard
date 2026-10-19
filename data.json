@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-10-18T02:50:36Z",
+  "updatedAt": "2026-10-19T04:59:19Z",
   "projects": [
     {
       "id": "myscaffolding",
       "name": "MyScaffolding（TimeCocoon · 时间茧）",
       "repo": "https://github.com/liandaoshou/MyScaffolding",
       "stage": "开发编码",
-      "stageNote": "依据：10/16 合入里程碑 B 全部（阶段流水线 #48、审核关卡 #49、看板与首页待办 #54），及 UI 规范与知识库修复 #50–#53；main 最新为 Merge #54；10/17 新开 #55（ADR 0019 修订）与 #56（首页套用设计规范），CI 均通过，待合入",
+      "stageNote": "依据：10/16 合入里程碑 B 全部（阶段流水线 #48、审核关卡 #49、看板与首页待办 #54），及 UI 规范与知识库修复 #50–#53；10/19 合入 #55（ADR 0019 修订）与 #56（首页套用设计规范），main 最新为 Merge #55，CI 通过；目前没有待合入的 PR",
       "owner": "liandaoshou",
       "progress": null,
       "milestone": "里程碑 B 已完成（#48 / #49 / #54）",
@@ -14,22 +14,11 @@
       "risk": "",
       "risks": [],
       "todos": [],
-      "openPRs": [
-        {
-          "number": 56,
-          "title": "UI：首页套用设计规范",
-          "url": "https://github.com/liandaoshou/MyScaffolding/pull/56"
-        },
-        {
-          "number": 55,
-          "title": "docs(adr): ADR 0019 修订（里程碑 B 落地时的五处补充）",
-          "url": "https://github.com/liandaoshou/MyScaffolding/pull/55"
-        }
-      ],
+      "openPRs": [],
       "lastCommit": {
-        "date": "2026-10-16T02:35:28Z",
-        "message": "Merge pull request #54 from liandaoshou/feat/stage-board",
-        "url": "https://github.com/liandaoshou/MyScaffolding/commit/a7f4da17de513587e1a966a237a9314eb60f7315"
+        "date": "2026-10-19T03:16:07Z",
+        "message": "Merge pull request #55 from liandaoshou/docs/adr-0019-amend",
+        "url": "https://github.com/liandaoshou/MyScaffolding/commit/df456039cb4d24f063424873f91038201b7107e2"
       },
       "description": "TimeCocoon · 时间茧 is a local-first personal work system. You state a goal, approve a plan, and watch an agent runtime stream the work into real artifacts. This repository is the scaffold for that system: strict tooling from the first commit, and one sample module — projects, plus a live run — that later features should copy."
     }
