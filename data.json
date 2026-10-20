@@ -1,24 +1,24 @@
 {
-  "updatedAt": "2026-10-19T04:59:19Z",
+  "updatedAt": "2026-10-20T09:46:36Z",
   "projects": [
     {
       "id": "myscaffolding",
       "name": "MyScaffolding（TimeCocoon · 时间茧）",
       "repo": "https://github.com/liandaoshou/MyScaffolding",
       "stage": "开发编码",
-      "stageNote": "依据：10/16 合入里程碑 B 全部（阶段流水线 #48、审核关卡 #49、看板与首页待办 #54），及 UI 规范与知识库修复 #50–#53；10/19 合入 #55（ADR 0019 修订）与 #56（首页套用设计规范），main 最新为 Merge #55，CI 通过；目前没有待合入的 PR",
+      "stageNote": "依据：10/16 合入里程碑 B 全部（#48 / #49 / #54）；10/19 合入 #55–#56，随后合入里程碑「量化项目看板」的故事定稿与 ADR 0020（#57 / #58 / #62）、验收用例（#61）、项目页与看板套用设计规范（#59 / #60）、手机隐藏拖拽手柄（#63），以及量化模板审核关卡与回撤规则检查（#64，PR1/3）；main 最新为 Merge #64，CI 通过；目前没有待合入的 PR",
       "owner": "liandaoshou",
       "progress": null,
-      "milestone": "里程碑 B 已完成（#48 / #49 / #54）",
+      "milestone": "里程碑「量化项目看板」进行中：PR1/3 已合入（#64），剩看板展示（PR2）与附件（PR3）",
       "milestoneDate": "",
       "risk": "",
       "risks": [],
       "todos": [],
       "openPRs": [],
       "lastCommit": {
-        "date": "2026-10-19T03:16:07Z",
-        "message": "Merge pull request #55 from liandaoshou/docs/adr-0019-amend",
-        "url": "https://github.com/liandaoshou/MyScaffolding/commit/df456039cb4d24f063424873f91038201b7107e2"
+        "date": "2026-10-19T07:36:05Z",
+        "message": "Merge pull request #64 from liandaoshou/feat/quant-template",
+        "url": "https://github.com/liandaoshou/MyScaffolding/commit/91f64199a7b36cdbe0bb37c195128dcd22c0e6d7"
       },
       "description": "TimeCocoon · 时间茧 is a local-first personal work system. You state a goal, approve a plan, and watch an agent runtime stream the work into real artifacts. This repository is the scaffold for that system: strict tooling from the first commit, and one sample module — projects, plus a live run — that later features should copy."
     }
