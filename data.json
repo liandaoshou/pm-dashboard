@@ -1,24 +1,30 @@
 {
-  "updatedAt": "2026-10-20T09:46:36Z",
+  "updatedAt": "2026-10-23T07:36:59Z",
   "projects": [
     {
       "id": "myscaffolding",
       "name": "MyScaffolding（TimeCocoon · 时间茧）",
       "repo": "https://github.com/liandaoshou/MyScaffolding",
       "stage": "开发编码",
-      "stageNote": "依据：10/16 合入里程碑 B 全部（#48 / #49 / #54）；10/19 合入 #55–#56，随后合入里程碑「量化项目看板」的故事定稿与 ADR 0020（#57 / #58 / #62）、验收用例（#61）、项目页与看板套用设计规范（#59 / #60）、手机隐藏拖拽手柄（#63），以及量化模板审核关卡与回撤规则检查（#64，PR1/3）；main 最新为 Merge #64，CI 通过；目前没有待合入的 PR",
+      "stageNote": "依据：10/16 合入里程碑 B 全部（#48 / #49 / #54）；10/19 合入 #55–#64（量化模板）；10/23 合入量化看板与附件（#65 / #66）、附件字号（#67）、创作故事与 ADR 0021 及验收（#69–#72）、创作模板与审核（#73）、拍板确认与创作看板（#74 / #75）、今日首页故事/ADR/验收与学习入口（#76–#80）；main 最新为 Merge #80，CI 通过；待合入 #81（里程碑八知识图谱故事候选草稿）",
       "owner": "liandaoshou",
       "progress": null,
-      "milestone": "里程碑「量化项目看板」进行中：PR1/3 已合入（#64），剩看板展示（PR2）与附件（PR3）",
+      "milestone": "里程碑「量化项目看板」「创作项目看板」已合入；里程碑七「今日首页」PR1 已合入（#80）；里程碑八知识图谱故事候选草稿待审（#81）",
       "milestoneDate": "",
       "risk": "",
       "risks": [],
       "todos": [],
-      "openPRs": [],
+      "openPRs": [
+        {
+          "number": 81,
+          "title": "docs(product): 里程碑八知识图谱用户故事（候选草稿）",
+          "url": "https://github.com/liandaoshou/MyScaffolding/pull/81"
+        }
+      ],
       "lastCommit": {
-        "date": "2026-10-19T07:36:05Z",
-        "message": "Merge pull request #64 from liandaoshou/feat/quant-template",
-        "url": "https://github.com/liandaoshou/MyScaffolding/commit/91f64199a7b36cdbe0bb37c195128dcd22c0e6d7"
+        "date": "2026-10-23T06:52:34Z",
+        "message": "Merge pull request #80 from liandaoshou/feat/home-today",
+        "url": "https://github.com/liandaoshou/MyScaffolding/commit/b2db8f71ce7133595471bb96b6f9f033b73de9f9"
       },
       "description": "TimeCocoon · 时间茧 is a local-first personal work system. You state a goal, approve a plan, and watch an agent runtime stream the work into real artifacts. This repository is the scaffold for that system: strict tooling from the first commit, and one sample module — projects, plus a live run — that later features should copy."
     }
