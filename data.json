@@ -1,30 +1,40 @@
 {
-  "updatedAt": "2026-10-24T11:40:32Z",
+  "updatedAt": "2026-10-24T23:56:56Z",
   "projects": [
     {
       "id": "myscaffolding",
       "name": "MyScaffolding（TimeCocoon · 时间茧）",
       "repo": "https://github.com/liandaoshou/MyScaffolding",
       "stage": "开发编码",
-      "stageNote": "依据：10/23 合入里程碑八知识图谱（#84–#87）与里程碑九桌面端（#88–#93）；10/24 合入里程碑十文档与验收（#94–#97）及实现 PR1（#98，数据仓真页 + 复习趋势 + 掌握度）；main 最新为 Merge #98（5e4b823）；开放 #99（阶段耗时 stage-durations PR2，测试侧 I4/I6 PASS，CI 因账号计费未真正跑用例，合由用户）",
+      "stageNote": "依据：10/23 合入里程碑八知识图谱（#84–#87）与里程碑九桌面端（#88–#93）；10/24 合入里程碑十文档/验收（#94–#97）、实现 PR1（#98）与 PR2（#99，阶段耗时）；测试侧回归 PASS（见 qa-reports/m10-insights-regression.md）；main 最新为 Merge #99（d3a9e5e）；开放 #100–#102（首页学习芯片零剩余文案：设计约定 / ADR 0026 / 里程碑十一故事候选），合由用户，CI 秒失败疑似账号计费未真正跑用例",
       "owner": "liandaoshou",
       "progress": null,
-      "milestone": "里程碑八「知识图谱」、里程碑九「桌面端」已收官；里程碑十「个人数据仓」文档/验收与 PR1（#98）已合入；实现 PR2（#99）待合",
+      "milestone": "里程碑八「知识图谱」、里程碑九「桌面端」、里程碑十「个人数据仓」已收官；软缺口「还剩 0 张」文档栈 #100–#102 待合，实现另开开发 PR",
       "milestoneDate": "",
       "risk": "",
       "risks": [],
       "todos": [],
       "openPRs": [
         {
-          "number": 99,
-          "title": "feat(insights): 阶段耗时 stage-durations（里程碑十 PR2）",
-          "url": "https://github.com/liandaoshou/MyScaffolding/pull/99"
+          "number": 102,
+          "title": "docs(product): 首页学习芯片零剩余文案（候选草稿）",
+          "url": "https://github.com/liandaoshou/MyScaffolding/pull/102"
+        },
+        {
+          "number": 101,
+          "title": "docs(adr): ADR 0026 首页学习芯片零剩余文案",
+          "url": "https://github.com/liandaoshou/MyScaffolding/pull/101"
+        },
+        {
+          "number": 100,
+          "title": "docs(design): 首页学习芯片零剩余文案约定",
+          "url": "https://github.com/liandaoshou/MyScaffolding/pull/100"
         }
       ],
       "lastCommit": {
-        "date": "2026-10-24T11:09:32Z",
-        "message": "Merge pull request #98 from liandaoshou/feat/insights-pr1",
-        "url": "https://github.com/liandaoshou/MyScaffolding/commit/5e4b82326b9d150df7ff74378e101028e4717c19"
+        "date": "2026-10-24T12:10:52Z",
+        "message": "Merge pull request #99 from liandaoshou/feat/insights-pr2",
+        "url": "https://github.com/liandaoshou/MyScaffolding/commit/d3a9e5e1e2722df187b10803df7f2de333f108f3"
       },
       "description": "TimeCocoon · 时间茧 is a local-first personal work system. You state a goal, approve a plan, and watch an agent runtime stream the work into real artifacts. This repository is the scaffold for that system: strict tooling from the first commit, and one sample module — projects, plus a live run — that later features should copy."
     }
