@@ -1,30 +1,30 @@
 {
-  "updatedAt": "2026-10-23T07:36:59Z",
+  "updatedAt": "2026-10-24T04:09:19Z",
   "projects": [
     {
       "id": "myscaffolding",
       "name": "MyScaffolding（TimeCocoon · 时间茧）",
       "repo": "https://github.com/liandaoshou/MyScaffolding",
       "stage": "开发编码",
-      "stageNote": "依据：10/16 合入里程碑 B 全部（#48 / #49 / #54）；10/19 合入 #55–#64（量化模板）；10/23 合入量化看板与附件（#65 / #66）、附件字号（#67）、创作故事与 ADR 0021 及验收（#69–#72）、创作模板与审核（#73）、拍板确认与创作看板（#74 / #75）、今日首页故事/ADR/验收与学习入口（#76–#80）；main 最新为 Merge #80，CI 通过；待合入 #81（里程碑八知识图谱故事候选草稿）",
+      "stageNote": "依据：10/23 合入里程碑八知识图谱（#84–#87）与里程碑九桌面端（#88–#93，含窗口 sidecar 与托盘）；10/24 合入里程碑十文档与验收（故事 #94、ADR 0025 #95、UI #96、验收 #97）；main 最新为 Merge #97（586fbd2）；开放 #98（数据仓真页 PR1，产品侧 PASS，CI 因账号计费未真正跑用例）",
       "owner": "liandaoshou",
       "progress": null,
-      "milestone": "里程碑「量化项目看板」「创作项目看板」已合入；里程碑七「今日首页」PR1 已合入（#80）；里程碑八知识图谱故事候选草稿待审（#81）",
+      "milestone": "里程碑八「知识图谱」、里程碑九「桌面端」已收官；里程碑十「个人数据仓」文档与验收已合入；实现 PR1（#98）待合",
       "milestoneDate": "",
       "risk": "",
       "risks": [],
       "todos": [],
       "openPRs": [
         {
-          "number": 81,
-          "title": "docs(product): 里程碑八知识图谱用户故事（候选草稿）",
-          "url": "https://github.com/liandaoshou/MyScaffolding/pull/81"
+          "number": 98,
+          "title": "feat(insights): 数据仓真页 + 复习趋势 + 掌握度分布（里程碑十 PR1）",
+          "url": "https://github.com/liandaoshou/MyScaffolding/pull/98"
         }
       ],
       "lastCommit": {
-        "date": "2026-10-23T06:52:34Z",
-        "message": "Merge pull request #80 from liandaoshou/feat/home-today",
-        "url": "https://github.com/liandaoshou/MyScaffolding/commit/b2db8f71ce7133595471bb96b6f9f033b73de9f9"
+        "date": "2026-10-24T02:17:37Z",
+        "message": "Merge pull request #97 from liandaoshou/docs/milestone-10-acceptance",
+        "url": "https://github.com/liandaoshou/MyScaffolding/commit/586fbd2d6eaa29fb76eea25ee46e28f94443a727"
       },
       "description": "TimeCocoon · 时间茧 is a local-first personal work system. You state a goal, approve a plan, and watch an agent runtime stream the work into real artifacts. This repository is the scaffold for that system: strict tooling from the first commit, and one sample module — projects, plus a live run — that later features should copy."
     }
