@@ -1,40 +1,24 @@
 {
-  "updatedAt": "2026-10-27T23:41:12Z",
+  "updatedAt": "2026-10-28T06:43:36Z",
   "projects": [
     {
       "id": "myscaffolding",
       "name": "MyScaffolding（TimeCocoon · 时间茧）",
       "repo": "https://github.com/liandaoshou/MyScaffolding",
       "stage": "开发编码",
-      "stageNote": "依据：10/27 合入里程碑二十二 Source 本地文件字节（#116–#120：ADR 0037、UI 约定、故事、验收、实现）；main 最新为 Merge #120（6636cd2）。开放文档 PR：#121 ADR 0038、#122 里程碑二十三故事、#123 Artifact 附件 UI 约定（合序 #122→#121→#123）。",
+      "stageNote": "依据：10/28 合入里程碑二十三 Artifact document 附件（#121–#125：ADR 0038、故事、UI 约定、验收、实现）；main 最新为 Merge #125（6944f6f）。开放 PR：无。",
       "owner": "liandaoshou",
       "progress": null,
-      "milestone": "里程碑二十二「Source 本地文件字节」已收官（#116–#120）；里程碑二十三「阶段产物附件扩到 document」文档三件套待合（#121–#123）。",
+      "milestone": "里程碑二十三「阶段产物附件扩到 document」已收官（#121–#125）；里程碑二十二「Source 本地文件字节」此前已合（#116–#120）。",
       "milestoneDate": "",
       "risk": "",
       "risks": [],
       "todos": [],
-      "openPRs": [
-        {
-          "number": 123,
-          "title": "docs(design): 阶段产物 Artifact 附件 UI 约定（扩 document）",
-          "url": "https://github.com/liandaoshou/MyScaffolding/pull/123"
-        },
-        {
-          "number": 122,
-          "title": "docs(product): 里程碑二十三 Artifact 文件服务故事（候选）",
-          "url": "https://github.com/liandaoshou/MyScaffolding/pull/122"
-        },
-        {
-          "number": 121,
-          "title": "docs(adr): 0038 阶段产物附件扩到 document",
-          "url": "https://github.com/liandaoshou/MyScaffolding/pull/121"
-        }
-      ],
+      "openPRs": [],
       "lastCommit": {
-        "date": "2026-10-27T14:55:22Z",
-        "message": "Merge pull request #120 from liandaoshou/feat/project-source-local-file",
-        "url": "https://github.com/liandaoshou/MyScaffolding/commit/6636cd266852cdc2d254ce7bb90007b34c8cd02e"
+        "date": "2026-10-28T06:12:34Z",
+        "message": "Merge pull request #125 from liandaoshou/feat/artifact-document-attachment",
+        "url": "https://github.com/liandaoshou/MyScaffolding/commit/6944f6f8cf7e5cd808f1df74c04c7e4f7944315b"
       },
       "description": "TimeCocoon · 时间茧 is a local-first personal work system. You state a goal, approve a plan, and watch an agent runtime stream the work into real artifacts. This repository is the scaffold for that system: strict tooling from the first commit, and one sample module — projects, plus a live run — that later features should copy."
     }
