@@ -1,24 +1,24 @@
 {
-  "updatedAt": "2026-11-03T23:51:24Z",
+  "updatedAt": "2026-11-04T05:58:33Z",
   "projects": [
     {
       "id": "myscaffolding",
       "name": "MyScaffolding（TimeCocoon · 时间茧）",
       "repo": "https://github.com/liandaoshou/MyScaffolding",
       "stage": "开发编码",
-      "stageNote": "依据：11/03 合入里程碑二十四「正式工作项人手创建与优先级/截止」（#126–#131）与看板 WorkItemCard 角标（#133–#135）；另合入失败/取消后再执行的设计/ADR/薄验收文档（#136–#139）。main 最新为 Merge #139（8f93f83）。开放 PR：无。",
+      "stageNote": "依据：11/03 合入里程碑二十四「正式工作项人手创建与优先级/截止」（#126–#131）与看板 WorkItemCard 角标（#133–#135）；11/03–11/04 合入失败/取消后再执行的设计/ADR/薄验收（#136–#139）与实现（#140）。main 最新为 Merge #140（bffa968）。开放 PR：无。",
       "owner": "liandaoshou",
       "progress": null,
-      "milestone": "里程碑二十四「正式工作项人手创建与优先级/截止」已收官（#126–#131）；看板 priority/due 角标已合（#133–#135）；「失败/取消后再执行」文档齐（#137–#139），实现 PR 尚未开。",
+      "milestone": "里程碑二十四「正式工作项人手创建与优先级/截止」已收官（#126–#131）；看板 priority/due 角标已合（#133–#135）；「失败/取消后再执行」文档+实现已合（#137–#140）。",
       "milestoneDate": "",
       "risk": "",
       "risks": [],
       "todos": [],
       "openPRs": [],
       "lastCommit": {
-        "date": "2026-11-03T02:59:27Z",
-        "message": "Merge pull request #139 from liandaoshou/docs/rerun-after-fail-acceptance",
-        "url": "https://github.com/liandaoshou/MyScaffolding/commit/8f93f8345fc308e10b84176a1a908f6a15a70a55"
+        "date": "2026-11-04T03:21:39Z",
+        "message": "Merge pull request #140 from liandaoshou/feat/retry-start-after-fail",
+        "url": "https://github.com/liandaoshou/MyScaffolding/commit/bffa968709ed08bf83ded68f18902c1ca1c160fc"
       },
       "description": "TimeCocoon · 时间茧 is a local-first personal work system. You state a goal, approve a plan, and watch an agent runtime stream the work into real artifacts. This repository is the scaffold for that system: strict tooling from the first commit, and one sample module — projects, plus a live run — that later features should copy."
     }
